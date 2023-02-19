@@ -16,37 +16,29 @@
       </div>
       <div class="card-body">
         <table id="data_table" class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>NIS</th>
-              <th>NISN</th>
-              <th>Nama Lengkap</th>
-              <th>Nama Ayah</th>
-              <th>Nama Ibu</th>
-              <th>Nama Wali</th>
-              <th>Alamat</th>
-              <th>Telepon</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
+        <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama ruang</th>
+          <th>Kode ruang</th>
+          <th>Keterangan</th>
 
-          </tbody>
-          <tfoot>
-            <tr>
-              <th>No</th>
-              <th>NIS</th>
-              <th>NISN</th>
-              <th>Nama Lengkap</th>
-              <th>Nama Ayah</th>
-              <th>Nama Ibu</th>
-              <th>Nama Wali</th>
-              <th>Alamat</th>
-              <th>Telepon</th>
-              <th>Aksi</th>
-            </tr>
-          </tfoot>
+          <th></th>
+        </tr>
+      </thead>
+   
+      <tbody>
+
+      </tbody>
+      <tfoot>
+        <tr>
+        <th>No</th>
+          <th>Nama ruang</th>
+          <th>Kode ruang</th>
+          <th>Keterangan</th>
+          <th></th>
+        </tr>
+      </tfoot>
         </table>
       </div>
     </div>
@@ -67,65 +59,31 @@
             <input type="hidden" id="id" name="id" class="form-control" placeholder="Id" maxlength="11" required>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <div class="form-group mb-2">
-                <label for="nis" class="col-form-label"> Nis: <span class="text-danger">*</span> </label>
-                <input type="number" id="nis" name="nis" class="form-control" placeholder="Nis" minlength="0" maxlength="11" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group mb-2">
-                <label for="nisn" class="col-form-label"> Nisn: <span class="text-danger">*</span> </label>
-                <input type="number" id="nisn" name="nisn" class="form-control" placeholder="Nisn" minlength="0" maxlength="11" required>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group mb-2">
-                <label for="nama_lengkap" class="col-form-label"> Nama lengkap: </label>
-                <input type="text" id="nama_lengkap" name="nama_lengkap" class="form-control" placeholder="Nama lengkap" minlength="0" maxlength="250">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group mb-2">
-                <label for="nama_ayah" class="col-form-label"> Nama ayah: </label>
-                <input type="text" id="nama_ayah" name="nama_ayah" class="form-control" placeholder="Nama ayah" minlength="0" maxlength="250">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group mb-2">
-                <label for="nama_ibu" class="col-form-label"> Nama ibu: </label>
-                <input type="text" id="nama_ibu" name="nama_ibu" class="form-control" placeholder="Nama ibu" minlength="0" maxlength="250">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group mb-2">
-                <label for="nama_wali" class="col-form-label"> Nama wali: </label>
-                <input type="text" id="nama_wali" name="nama_wali" class="form-control" placeholder="Nama wali" minlength="0" maxlength="250">
+            <div class="col-md-12">
+              <div class="form-group mb-3">
+                <label for="nama_ruang" class="col-form-label"> Nama ruang: <span class="text-danger">*</span> </label>
+                <input type="text" id="nama_ruang" name="nama_ruang" class="form-control" placeholder="Nama ruang" minlength="0" maxlength="30" required>
               </div>
             </div>
             <div class="col-md-12">
-              <div class="form-group mb-2">
-                <label for="telepon" class="col-form-label"> Telepon: </label>
-                <input type="text" id="telepon" name="telepon" class="form-control" placeholder="Telepon" minlength="0" maxlength="20">
+              <div class="form-group mb-3">
+                <label for="kode_ruang" class="col-form-label"> Kode ruang: <span class="text-danger">*</span> </label>
+                <input type="text" id="kode_ruang" name="kode_ruang" class="form-control" placeholder="Kode ruang" minlength="0" maxlength="10" required>
               </div>
             </div>
             <div class="col-md-12">
-              <div class="form-group mb-2">
-                <label for="alamat" class="col-form-label"> Alamat: </label>
-                <textarea cols="40" rows="4" id="alamat" name="alamat" class="form-control" placeholder="Alamat" minlength="0"></textarea>
+              <div class="form-group mb-3">
+                <label for="keterangan" class="col-form-label"> Keterangan: <span class="text-danger">*</span> </label>
+                <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="Keterangan" minlength="0" maxlength="40" required>
               </div>
             </div>
-
           </div>
 
           <div class="form-group text-center">
             <div class="btn-group">
-              <button type="submit" class="btn btn-success" id="form-btn"><?= lang("App.save") ?></button>
+              <button type="submit" class="btn btn-success mr-2" id="form-btn"><?= lang("App.save") ?></button>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><?= lang("App.cancel") ?></button>
-
             </div>
-
-
           </div>
         </form>
       </div>
@@ -176,7 +134,7 @@
         async: "true",
       },
       initComplete: function() {
-        this.api().columns([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).every(function() {
+        this.api().columns([0, 1, 2, 3,4]).every(function() {
           var column = this;
           var select = $('<input type="text" class="form-control" />')
             .appendTo($(column.footer()).empty())
@@ -244,15 +202,10 @@
             keyboard: false
           });
           //insert data to form
-          $("#data-form #id").val(response.id);
-          $("#data-form #nis").val(response.nis);
-          $("#data-form #nisn").val(response.nisn);
-          $("#data-form #nama_lengkap").val(response.nama_lengkap);
-          $("#data-form #nama_ayah").val(response.nama_ayah);
-          $("#data-form #nama_ibu").val(response.nama_ibu);
-          $("#data-form #nama_wali").val(response.nama_wali);
-          $("#data-form #alamat").val(response.alamat);
-          $("#data-form #telepon").val(response.telepon);
+         $("#data-form #id").val(response.id);
+          $("#data-form #nama_ruang").val(response.nama_ruang);
+          $("#data-form #kode_ruang").val(response.kode_ruang);
+          $("#data-form #keterangan").val(response.keterangan);
 
         }
       });

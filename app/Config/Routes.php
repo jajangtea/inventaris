@@ -30,22 +30,18 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/siswa', 'Siswa::index');
-$routes->post('/siswa/getAll', 'Siswa::getAll');
-$routes->post('/siswa/getOne', 'Siswa::getOne');
-$routes->post('/siswa/add', 'Siswa::add');
-$routes->post('/siswa/edit', 'Siswa::edit');
-$routes->post('/siswa/remove', 'Siswa::remove');
 
 
 
-$routes->get('/kelassiswa', 'Kelassiswa::index');
-$routes->post('/kelassiswa/getAll', 'Kelassiswa::getAll');
-$routes->post('/kelassiswa/add', 'Kelassiswa::add');
-$routes->post('/kelassiswa/edit', 'Kelassiswa::edit');
-$routes->post('/kelassiswa/remove', 'Kelassiswa::remove');
 
-$routes->match(['get', 'post'], 'kelassiswa/ajaxSearch', 'Kelassiswa::ajaxSearch');
+$routes->get('/ruangan', 'Ruangan::index');
+$routes->post('/ruangan/getAll', 'Ruangan::getAll');
+$routes->post('/ruangan/add', 'Ruangan::add');
+$routes->post('/ruangan/edit', 'Ruangan::edit');
+$routes->post('/ruangan/remove', 'Ruangan::remove');
+$routes->post('/ruangan/getOne', 'Ruangan::getOne');
+
+// $routes->match(['get', 'post'], 'kelassiswa/ajaxSearch', 'Kelassiswa::ajaxSearch');
 
 
 

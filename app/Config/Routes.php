@@ -41,6 +41,13 @@ $routes->post('/ruangan/edit', 'Ruangan::edit');
 $routes->post('/ruangan/remove', 'Ruangan::remove');
 $routes->post('/ruangan/getOne', 'Ruangan::getOne');
 
+$routes->get('/pegawai', 'Pegawai::index');
+$routes->post('/pegawai/getAll', 'Pegawai::getAll');
+$routes->post('/pegawai/add', 'Pegawai::add');
+$routes->post('/pegawai/edit', 'Pegawai::edit');
+$routes->post('/pegawai/remove', 'Pegawai::remove');
+$routes->post('/pegawai/getOne', 'Pegawai::getOne');
+
 // $routes->match(['get', 'post'], 'kelassiswa/ajaxSearch', 'Kelassiswa::ajaxSearch');
 
 
